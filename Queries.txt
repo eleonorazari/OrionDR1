@@ -1,0 +1,20 @@
+Query 1
+
+select gaia.source\_id, gaia.ra, gaia.dec, gaia.l, gaia.b, gaia.phot\_g\_mean\_mag, gaia.pmra, gaia.pmdec, gaia.parallax, 
+gaia.pmra\_error, gaia.pmdec\_error, gaia.parallax\_error  \\
+from gaiadr1.gaia\_source as gaia \\
+where gaia.l>=190.0 and gaia.l<=220.0 and gaia.b>=-30.0 and gaia.b<=-5.0
+
+
+Query 2
+
+select gaia.source\_id, gaia.l, gaia.b, gaia.phot\_g\_mean\_mag, 
+gaia.phot\_g\_mean\_flux, \\ gaia.phot\_g\_mean\_flux\_error,
+gaia.parallax,gaia.parallax\_error, \\gaia.pmra,gaia.pmdec,gaia.pmra\_error,gaia.pmdec\_error, \\
+ tmass.j\_m, tmass.j\_msigcom, tmass.h\_m, tmass.h\_msigcom, tmass.ks\_m,  tmass.ks\_msigcom,  \\ tmass.ph\_qual
+from gaiadr1.gaia\_source as gaia \\
+inner join gaiadr1.tmass\_best\_neighbour as xmatch \\
+on gaia.source\_id = xmatch.source\_id \\
+inner join gaiadr1.tmass\_original\_valid as tmass \\
+on tmass.tmass\_oid = xmatch.tmass\_oid \\
+where gaia.l > 190.0 and gaia.l < 220.0 \\and gaia.b < -5.0 and gaia.b > -30.0 and xmatch.angular\_distance < 1.0
