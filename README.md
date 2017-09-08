@@ -7,6 +7,8 @@ can be used to retrieve them from the Archive.
 The notebook titled KDEs is the collection of the scripts used to produce Fig. 4, 6, 8, 9, and 15.
 Note that for Fig. 15, you need to install this package: http://dustmaps.readthedocs.io/en/latest/index.html.
 
+The notebook titled unsharpMasking was used to make Fig. 7. 
+
 
 
 
