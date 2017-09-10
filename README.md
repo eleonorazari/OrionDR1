@@ -16,4 +16,6 @@ bayesIsoFit_prlxConst is the notebook I used to a) perform the Bayesian Isochron
 
 In the paper Appendix it is also described how to implement a uniform parallax prior. See notebook bayesIsoFit_prlxPrior.
 
+Finally, everything I have done with PanStarrs is in the notebook with the same name.
+
 
