@@ -16,6 +16,9 @@ bayesIsoFit_prlxConst is the notebook I used to a) perform the Bayesian Isochron
 
 In the paper Appendix it is also described how to implement a uniform parallax prior. See notebook bayesIsoFit_prlxPrior.
 
+The possibility that we have found the Orion X population discovered by Bouy & Alves (2015) is investigated in the notebook titled
+OrionX.
+
 Finally, everything I have done with PanStarrs is in the notebook with the same name.
 
 
